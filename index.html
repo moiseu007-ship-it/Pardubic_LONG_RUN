@@ -350,7 +350,7 @@ $("#dl").onclick=async()=>{
    ▼▼▼ GOOGLE SHEETS (пізніше): вставте сюди URL веб-застосунку Google Apps Script ▼▼▼
    Поки порожньо, дані нікуди не надсилаються. Працює лише коли сторінка розміщена на власному хостингу.
    ========================================================= */
-const SHEETS_URL="";
+const SHEETS_URL="https://script.google.com/macros/s/AKfycbx1NlguIyd-IpoYZdd4XxbTkinN1R08SnijskX_WR6uj0-JVzeoA2VObTIHJMc2rvd6Mg/exec";
 $("#f").onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target);
  if(SHEETS_URL){try{fetch(SHEETS_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({name:fd.get("n"),contact:fd.get("c"),lang:LG,date:new Date().toISOString()})}).catch(()=>{})}catch(x){}}
  e.target.hidden=true;$("#ok").hidden=false};
